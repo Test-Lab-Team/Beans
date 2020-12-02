@@ -1,0 +1,1 @@
+請大家clone下來後，建立自己的branch，再將建立好的Bean程式碼(資料夾)push 上來!
