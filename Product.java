@@ -25,6 +25,7 @@ public class Product {
 	Integer Price;
 	Integer viewCount;
 	String date;
+	Integer storage;
 
 //	@OneToMany(mappedBy = "Product", fetch = FetchType.EAGER)
 //	Set<Employee> employees = new HashSet<>();
@@ -44,7 +45,7 @@ public class Product {
 	 * @param price
 	 */
 	public Product(Integer productId, String e_name, String c_name, String img_url, String g_maker, String iss,
-			String info, Integer price, Integer viewCount, String date) {
+			String info, Integer price, Integer viewCount, String date, Integer storage) {
 		super();
 		this.productId = productId;
 		this.E_name = e_name;
@@ -56,6 +57,7 @@ public class Product {
 		this.Price = price;
 		this.viewCount = viewCount;
 		this.date = date;
+		this.storage = storage;
 	}
 
 
@@ -142,6 +144,16 @@ public class Product {
 		this.date = date;
 	}
 
+	
+	
+	public Integer getStorage() {
+		return storage;
+	}
+
+	public void setStorage(Integer storage) {
+		this.storage = storage;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -165,9 +177,13 @@ public class Product {
 		builder.append(viewCount);
 		builder.append(", date=");
 		builder.append(date);
+		builder.append(", storage=");
+		builder.append(storage);
 		builder.append("]");
 		return builder.toString();
 	}
+
+
 
 
 
